@@ -1,5 +1,8 @@
 <?php
 
+use Prismic\Api as PrismicIO;
+use Prismic\Document;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +14,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (PrismicIO $prismic) {
+    $document = $prismic->getSingle('welcome-page');
+    return view('welcome', compact('document'));
 });
