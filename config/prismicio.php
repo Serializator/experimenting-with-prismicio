@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'repository' => env('PRISMICIO_REPOSITORY', 'https://your-repo-name.prismic.io/api/v2'),
+    'repository' => env('PRISMICIO_REPOSITORY', 'https://your-repo-name.prismic.io/api'),
 ];
